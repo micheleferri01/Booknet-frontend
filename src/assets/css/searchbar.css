@@ -1,0 +1,16 @@
+.form-control{
+    border:1px solid gray;
+    border-radius: 20px;
+    color: white;
+    background-color: #212529;
+}
+
+.form-control::placeholder{
+    color: white;
+    opacity: 1;
+}
+
+.form-control:focus{
+    border-color: transparent;
+    box-shadow: none;
+}
