@@ -1,7 +1,6 @@
 import axios  from "axios";
 import { useEffect, useState } from "react";
 import SearchSelect from "../components/SearchSelect";
-// import { useBooksContext } from "../contexts/BooksContext";
 import BooksCard from "../components/BooksCard";
 import { useSearchParams } from "react-router";
 
@@ -14,9 +13,6 @@ export default function BooksHomePage (){
     const [author, setAuthor] = useState(null);
     const [editor, setEditor] = useState(null);
     const [genre, setGenre] = useState(null);
-
-    // custom hook
-    // const {booksSetter, books} = useBooksContext();
 
     const [searchParams, setSearchParams]=useSearchParams();
 
