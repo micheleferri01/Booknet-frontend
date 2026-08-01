@@ -7,3 +7,22 @@
 .main-vh{
   min-height: calc(100vh - 56px);
 }
+
+.select-w{
+  width: 200px;
+}
+
+.title-book {
+  height: 3.5rem;
+}
+
+.card{
+  border: 1px solid gray;
+  background-color: #212529;
+  color: white;
+}
+
+.card:hover{
+  border: 1px solid rgb(62, 197, 242);
+  scale: 1.1;
+}
