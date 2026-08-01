@@ -8,7 +8,10 @@ export default function SearchSelect({url, placeholder, value, onChange}){
     const allOptions = options.map(option =>({
         value: option.slug,
         label: option.name
-    }))
+    }));
+
+    const selectedOption =
+    allOptions.find(option => option.value === value) || null;
 
     useEffect(()=>{
         const controller = new AbortController();
@@ -32,8 +35,9 @@ export default function SearchSelect({url, placeholder, value, onChange}){
         <Select 
         options={allOptions} 
         placeholder={placeholder} 
-        value={value} 
-        onChange={onChange}
+        value={selectedOption} 
+        onChange={(option) => {
+        onChange(option ? option.value : null)}}
         styles={{
         control: (base) => ({
             ...base,
