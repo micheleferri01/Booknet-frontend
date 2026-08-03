@@ -43,7 +43,9 @@ export default function BooksHomePage (){
                 }
             })
             .finally(()=>{
-                setLoading(false);
+                setTimeout(() => {
+                    setLoading(false);
+                }, 2000);
             });
             return ()=>{controller.abort();};
         },[searchParams]);
@@ -99,9 +101,9 @@ export default function BooksHomePage (){
 
         {loading? <h1 className="text-center my-3">Caricamento...</h1> : books === undefined ?
             <h1 className="text-center my-3">Nessun risultato trovato</h1>:
-            <section id="books"className="container mt-5">
-                <p className="mb-3">Risultati trovati ({books.length})</p>
-                <div className="row g-3 gap-3">
+            <section id="books"className="container pt-3 pb-5">
+                <p className="mb-4">Risultati trovati ({books.length})</p>
+                <div className="row g-3 gap-3 justify-content-center justify-content-md-start">
                     {books.map(book => {
                         return (
                         <BooksCard key={book.slug} book={book}/>
