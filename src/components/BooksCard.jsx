@@ -4,7 +4,7 @@ export default function BooksCard ({book}){
     const coverUrl = `${import.meta.env.VITE_BASE_URL_COVER}/${book.cover}`;
     return (
         <>
-        <Link to={'#'} className="col-auto text-decoration-none">
+        <Link to={`/${book.slug}`} className="col-auto text-decoration-none">
             <div className="card h-100" style={{width: "18rem",}}>
                 <img src={coverUrl} alt="" className="card-img-top" style={{height: "400px"}}/>
                 <div className="card-body">
