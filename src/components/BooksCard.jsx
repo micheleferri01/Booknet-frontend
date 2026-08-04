@@ -5,7 +5,7 @@ export default function BooksCard ({book}){
     return (
         <>
         <Link to={`/${book.slug}`} className="col-auto text-decoration-none">
-            <div className="card h-100" style={{width: "18rem",}}>
+            <div className="card bookCard h-100" style={{width: "18rem",}}>
                 <img src={coverUrl} alt="" className="card-img-top" style={{height: "400px"}}/>
                 <div className="card-body">
                     <h5 className="card-title title-book">{book.title}</h5>
