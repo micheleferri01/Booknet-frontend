@@ -9,6 +9,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 // custom css
 import './assets/css/App.css';
 import "./assets/css/searchbar.css";
+import "./assets/css/notification.css";
 
 
 createRoot(document.getElementById('root')).render(
