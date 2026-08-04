@@ -22,7 +22,15 @@
   color: white;
 }
 
-.card:hover{
-  border: 1px solid rgb(62, 197, 242);
-  scale: 1.1;
+
+.book-img {
+  width: 250px;
+}
+
+@media (min-width: 576px){
+  
+  .bookCard:hover{
+    border: 1px solid rgb(62, 197, 242);
+    scale: 1.1;
+  }
 }
