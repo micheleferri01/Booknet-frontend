@@ -24,12 +24,12 @@ export default function BookDetailsPage(){
             signal: controller.signal,
         })
              .then((res)=>{
-                console.log(res.data);
+                // console.log(res.data);
                 setBook(res.data.data);
             })
             .catch((err)=>{
                 if (err.name !== 'CanceledError') {
-                    console.error(err);
+                    // console.error(err);
                     setError(err);
                 }
             })

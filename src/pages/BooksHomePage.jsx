@@ -33,12 +33,12 @@ export default function BooksHomePage (){
             }
         })
              .then((res)=>{
-                console.log(res.data);
+                // console.log(res.data);
                 setBooks(res.data.data);
             })
             .catch((err)=>{
                 if (err.name !== 'CanceledError') {
-                    console.error(err);
+                    // console.error(err);
                     setError(err);
                 }
             })
@@ -50,7 +50,7 @@ export default function BooksHomePage (){
             return ()=>{controller.abort();};
         },[searchParams]);
 
-        console.log('libri',books);
+        // console.log('libri',books);
 
         
     return (

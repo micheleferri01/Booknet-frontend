@@ -17,7 +17,7 @@ export default function SearchSelect({url, placeholder, value, onChange}){
         const controller = new AbortController();
         axios.get(import.meta.env.VITE_BASE_API_URL + url, {signal: controller.signal})
              .then((res)=>{
-                console.log('options:', res.data);
+                // console.log('options:', res.data);
                 setOptions(res.data.data);
              })
              .catch((err)=>{
@@ -28,7 +28,7 @@ export default function SearchSelect({url, placeholder, value, onChange}){
         return ()=>{controller.abort();};
     },[]);
 
-    useEffect(()=> console.log(value));
+    // useEffect(()=> console.log(value));
 
     return (
         <>
