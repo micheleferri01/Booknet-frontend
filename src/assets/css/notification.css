@@ -1,0 +1,142 @@
+/* GENERIC NOTIFICATION */
+.notification {
+  position: fixed;
+  top: 180px;
+  left: 50%;
+  translate: -50% -50%;
+  padding: 18px 26px;
+  border-radius: 14px;
+  color: white;
+  z-index: 9999;
+  min-width: 320px;
+  background: linear-gradient(145deg, #020617, #050a18);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.95),
+    0 10px 25px rgba(0, 0, 0, 0.7),
+    inset 0 0 8px rgba(255, 255, 255, 0.05);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-align: center;
+  animation: slideDown 0.3s ease;
+}
+
+.notification.hiding {
+  animation: slideUp 0.3s ease forwards;
+}
+
+.notification i {
+  font-size: 18px;
+  margin-right: 0.3rem;
+}
+
+/* NOTIFICATION TYPE */
+.notification-success {
+  border: 1px solid #198754;
+  background:
+    radial-gradient(
+      ellipse at bottom right,
+      rgba(25, 135, 84, 0.35) 0%,
+      transparent 70%
+    ),
+    linear-gradient(145deg, #020617, #050a18);
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.95),
+    0 10px 25px rgba(0, 0, 0, 0.7),
+    0 0 10px rgba(25, 135, 84, 0.6),
+    0 0 25px rgba(25, 135, 84, 0.5),
+    0 0 50px rgba(25, 135, 84, 0.3);
+}
+
+.notification-danger {
+  border: 1px solid #dc3545;
+  background:
+    radial-gradient(
+      ellipse at bottom right,
+      rgba(220, 53, 69, 0.35) 0%,
+      transparent 70%
+    ),
+    linear-gradient(145deg, #020617, #050a18);
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.95),
+    0 10px 25px rgba(0, 0, 0, 0.7),
+    0 0 10px rgba(220, 53, 69, 0.7),
+    0 0 25px rgba(220, 53, 69, 0.5),
+    0 0 50px rgba(220, 53, 69, 0.3);
+}
+
+.notification-warning {
+  border: 1px solid #ffc107;
+  background:
+    radial-gradient(
+      ellipse at bottom right,
+      rgba(255, 193, 7, 0.35) 0%,
+      transparent 70%
+    ),
+    linear-gradient(145deg, #020617, #050a18);
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.95),
+    0 10px 25px rgba(0, 0, 0, 0.7),
+    0 0 10px rgba(255, 193, 7, 0.8),
+    0 0 25px rgba(255, 193, 7, 0.6),
+    0 0 50px rgba(255, 193, 7, 0.4);
+}
+
+.notification-info {
+  border: 1px solid #0dcaf0;
+  background:
+    radial-gradient(
+      ellipse at bottom right,
+      rgba(13, 202, 240, 0.35) 0%,
+      transparent 70%
+    ),
+    linear-gradient(145deg, #020617, #050a18);
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.95),
+    0 10px 25px rgba(0, 0, 0, 0.7),
+    0 0 10px rgba(13, 202, 240, 0.7),
+    0 0 25px rgba(13, 202, 240, 0.5),
+    0 0 50px rgba(13, 202, 240, 0.3);
+}
+
+.notification-primary {
+  border: 1px solid #0d6efd;
+  background:
+    radial-gradient(
+      ellipse at bottom right,
+      rgba(13, 110, 253, 0.35) 0%,
+      transparent 70%
+    ),
+    linear-gradient(145deg, #020617, #050a18);
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.95),
+    0 10px 25px rgba(0, 0, 0, 0.7),
+    0 0 10px rgba(13, 110, 253, 0.7),
+    0 0 25px rgba(13, 110, 253, 0.5),
+    0 0 50px rgba(13, 110, 253, 0.3);
+}
+
+/* KeyFrames animazione di slideDown per la notifica */
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    translate: -50% -70%;
+  }
+  to {
+    opacity: 1;
+    translate: -50% -50%;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    translate: -50% -50%;
+  }
+  to {
+    opacity: 0;
+    translate: -50% -70%;
+  }
+}
