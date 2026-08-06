@@ -42,7 +42,7 @@ export default function Cart() {
         books: cart,
     },{signal: controller.signal,})
          .then((res) => {
-            console.log(res.data);
+            // console.log(res.data);
             setBooks(res.data.data);
         })
          .catch((err) => {setError(err);})
@@ -100,7 +100,7 @@ export default function Cart() {
             </button>
             </div>
 
-            {cart.length === 0 ? (
+            {loading ? <h1 className="text-center">Caricamento...</h1> : cart.length === 0 ? (
             <h2 className="text-white text-center mt-5">Il tuo carrello è vuoto</h2>
             ) : (
             <div className="d-flex flex-column gap-3 my-4">
