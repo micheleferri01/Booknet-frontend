@@ -39,6 +39,10 @@ export default function SearchSelect({url, placeholder, value, onChange}){
         onChange={(option) => {
         onChange(option ? option.value : null)}}
         styles={{
+        input: (base) => ({
+            ...base,
+            color: "white",
+        }),
         control: (base) => ({
             ...base,
             backgroundColor: "#212529",
